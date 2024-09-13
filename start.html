@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jönköping University Survey</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <script src="data/quota_data.js"></script>
+  <script src="data/invalid_cases.js"></script>
+
+  <script src="scripts/PrepareData.js"></script>
+  <script src="scripts/CalculateData.js"></script>
+  <script type="text/javascript" src="https://silverliningresearch.github.io/daily_plan_data_sur_v2/MUC_PAK/interview_statistics.js"></script> 
+
+<style>
+  
+  /* h1 {text-align: center;}
+  h2 {text-align: center;}
+ */
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 300px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.red {background-color: #f44336;;} /* Red */
+.blue {background-color: #008CBA;;} /* Blue */ 
+
+</style>
+
+
+<style>
+  .table-font {
+    font-size: 16px;
+    /* height: 18px; */
+  }
+  .year_month{
+    font-size: 15px;
+    padding: 10px 8px 10px 14px;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .year_month .select{
+    width: 120%;
+    background:url('arrow.png') no-repeat;
+    background-position:80% center;
+  }
+
+  .year_month .select select{
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 120%;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+  }
+  .headerbackground {background-color: #66CCFF;;} /* Blue */ 
+
+</style>
+
+</head>
+<body>
+
+<script>
+    function start_new_interview() {
+      console.log("start_new_interview");
+      window.localStorage.clear();
+
+      let url = "https://silverliningresearch.github.io/jku/survey.html";
+      window.location.href = url;
+    }
+
+    function resume_curent_interview() {
+      console.log("resume_curent_interview");
+      let url = "https://silverliningresearch.github.io/jku/survey.html";
+      window.location.href = url;
+    }
+
+</script>
+<!-- <h2>BER PASSENGER SURVEY</h2> -->
+  </br>
+  </br>
+  <button onclick="start_new_interview()" class="button red">Start a new interview</button>
+  <button onclick="resume_curent_interview()" class="button blue">Resume the current interview </button>
+
+  <p>
+	</br>
+    *<strong>Resume the current interview</strong> will continue from the last question in the current interview.</br>
+	  </p>
+
+
+  <div style="background-color: lightblue;">
+  </br>
+  </div> 
+
+</body>
+</html>
+
+
