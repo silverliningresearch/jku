@@ -88,8 +88,26 @@ function get_selection()
   if ((api.fn.answers().Vilka_aktiviteter_20) && (api.fn.answers().Vilka_aktiviteter_20 == 1)) selected_id.push(20);
 
   console.log("selected item: ", selected_id); 
+  
+  if (selected_id[0] && selected_id[0]>0) {
+    api.fn.answers({selected_one:  selected_label[selected_id[0]-1]}); //index from 0
+  }
+  else {
+    api.fn.answers({selected_one:  "NA"}); //index from 0
+  }
 
-  api.fn.answers({selected_one:  selected_label[selected_id[0]-1]}); //index from 0
-  api.fn.answers({selected_two:  selected_label[selected_id[1]-1]});
-  api.fn.answers({selected_three:  selected_label[selected_id[2]-1]});
+  if (selected_id[1] && selected_id[1]>0) {
+    api.fn.answers({selected_two:  selected_label[selected_id[1]-1]});
+  }
+  else {
+    api.fn.answers({selected_two:  "NA"}); //index from 0
+  }
+
+  if (selected_id[2] && selected_id[2]>0) {
+    api.fn.answers({selected_three:  selected_label[selected_id[2]-1]});
+  }
+  else {
+    api.fn.answers({selected_three:  "NA"}); //index from 0
+  }
+
 }
