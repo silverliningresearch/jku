@@ -48,6 +48,14 @@
           const listSearchHandler = () => {
             console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
 
+            if ( api.fn.getCurrentPageIndex()==0) {
+              const queryString = window.location.search;
+              const urlParams = new URLSearchParams(queryString);
+              const urlVar01 = urlParams.get('urlVar01'); 
+
+              api.fn.answers({urlVar01: urlVar01});
+            }
+
             if (api.fn.getCurrentPageIndex() == 5) {
               get_selection();
             }
