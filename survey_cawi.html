@@ -54,6 +54,7 @@
               const urlVar01 = urlParams.get('urlVar01'); 
 
               api.fn.answers({urlVar01: urlVar01});
+              api.fn.answers({OrgID: urlVar01});
             }
 
             if (api.fn.getCurrentPageIndex() == 5) {
